@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scoreboard">
+      <h1>🏀 Basketball Scoreboard</h1>
+
+      <div class="teams">
+        <div class="team" id="teamA">
+          <h2>Team A</h2>
+          <p class="score" id="scoreA">0</p>
+          <button onclick="changeScore('A', 1)">+1</button>
+          <button onclick="changeScore('A', -1)">-1</button>
+          <p class="fouls">Fouls: <span id="foulsA">0</span></p>
+          <button onclick="changeFoul('A', 1)">+ Foul</button>
+        </div>
+
+        <div class="team" id="teamB">
+          <h2>Team B</h2>
+          <p class="score" id="scoreB">0</p>
+          <button onclick="changeScore('B', 1)">+1</button>
+          <button onclick="changeScore('B', -1)">-1</button>
+          <p class="fouls">Fouls: <span id="foulsB">0</span></p>
+          <button onclick="changeFoul('B', 1)">+ Foul</button>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <p>Quarter: <span id="quarter">1</span></p>
+        <p>Timer: <span id="timer">10:00</span></p>
+        <div class="controls">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+          <button onclick="resetGame()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
